@@ -11,11 +11,13 @@ class Program
         // int magicNumber = int.Parse(input);
 
         int guess = 0;
+        int guesses = 0;
         while (guess != randomNumber)
         {
             Console.Write("what is your guess? ");
             string input = Console.ReadLine();
             guess = int.Parse(input);
+            guesses++;
 
             if (guess == randomNumber)
             {
@@ -33,7 +35,12 @@ class Program
             {
                 Console.WriteLine("Invalid input.");
             }
+
+
+
+
         }
+        Console.WriteLine($"You guessed {guesses} times.");
         
         
 
