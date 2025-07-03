@@ -5,29 +5,29 @@ class Program
     static void Main(string[] args)
     {
         Random random = new Random();
-        int randomNumber = random.Next(1, 100);
+        int magicNumber = random.Next(1, 100);
         // Console.Write("what is the magic number? ");
         // string input = Console.ReadLine();
         // int magicNumber = int.Parse(input);
 
         int guess = 0;
         int guesses = 0;
-        while (guess != randomNumber)
+        while (guess != magicNumber)
         {
             Console.Write("what is your guess? ");
             string input = Console.ReadLine();
             guess = int.Parse(input);
             guesses++;
 
-            if (guess == randomNumber)
+            if (guess == magicNumber)
             {
                 Console.WriteLine("you guessed the magic number!");
             }
-            else if (guess > randomNumber)
+            else if (guess > magicNumber)
             {
                 Console.WriteLine("Lower");
             }
-            else if (guess < randomNumber)
+            else if (guess < magicNumber)
             {
                 Console.WriteLine("Higher");
             }
