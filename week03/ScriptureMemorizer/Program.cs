@@ -1,14 +1,10 @@
-using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Create a reference and scripture (single or multiple verses)
-        var reference = new Reference("Proverbs", 3, 5, 6);
-        string text = "Trust in the Lord with all thine heart and lean not unto thine own understanding.";
-
-        var scripture = new Scripture(reference, text);
+        ScriptureLibrary library = new ScriptureLibrary();
+        Scripture scripture = library.GetRandomScripture();
 
         while (true)
         {
@@ -19,9 +15,7 @@ class Program
             string input = Console.ReadLine();
 
             if (input.ToLower() == "quit")
-            {
                 break;
-            }
 
             scripture.HideRandomWords(3);
 
